@@ -1,0 +1,66 @@
+{
+  "same_fit_calibration_test_splits": true,
+  "logistic": {
+    "best_C": 1.0,
+    "cv_auc": 0.7600682878020046,
+    "raw_test": {
+      "roc_auc": 0.7761807295014187,
+      "average_precision": 0.5397941502123562,
+      "brier": 0.1311435919371919
+    },
+    "calibrated_test": {
+      "roc_auc": 0.7740570048541325,
+      "average_precision": 0.5236985299459276,
+      "brier": 0.1310138931249799
+    },
+    "decision": {
+      "threshold": 0.16666666666666666,
+      "recall": 0.7140600315955766,
+      "precision": 0.3845172267120374,
+      "false_positive_rate": 0.30566117448246727,
+      "flag_rate": 0.3918333333333333,
+      "cost_per_client": 0.5428333333333333,
+      "tn": 3287,
+      "fp": 1447,
+      "fn": 362,
+      "tp": 904
+    },
+    "explanation": "exact additive contributions to the raw logistic log-odds"
+  },
+  "hist_gradient_boosting": {
+    "best_params": {
+      "l2_regularization": 1.0,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 15
+    },
+    "cv_auc": 0.7774779961470945,
+    "raw_test": {
+      "roc_auc": 0.8022996393939575,
+      "average_precision": 0.5729876197454347,
+      "brier": 0.1263976535427779
+    },
+    "calibrated_test": {
+      "roc_auc": 0.8016392291053059,
+      "average_precision": 0.5558239764515762,
+      "brier": 0.12617894293162418
+    },
+    "decision": {
+      "threshold": 0.16666666666666666,
+      "recall": 0.7259083728278041,
+      "precision": 0.4021881838074398,
+      "false_positive_rate": 0.2885509083227714,
+      "flag_rate": 0.38083333333333336,
+      "cost_per_client": 0.5168333333333334,
+      "tn": 3368,
+      "fp": 1366,
+      "fn": 347,
+      "tp": 919
+    }
+  },
+  "held_out_auc_gap_hgb_minus_logistic": 0.026118909892538844,
+  "auc_gap_paired_bootstrap_95": [
+    0.01722649832412361,
+    0.03502125590213149
+  ],
+  "auc_gap_bootstrap_median": 0.025914793630511912
+}

@@ -1,0 +1,83 @@
+{
+  "deployed_features": "credit behaviour only; direct demographics excluded",
+  "policy_auc_behavior_only": 0.7464344117685278,
+  "policy_auc_with_demographics": 0.7496294097244088,
+  "policy_auc_gain_from_demographics": 0.0031949979558810737,
+  "test_auc_behavior_only": 0.7761461906106275,
+  "test_auc_with_demographics": 0.7803439172508244,
+  "test_auc_gain_from_demographics": 0.004197726640196908,
+  "global_threshold": 0.16666666666666666,
+  "group_diagnostics": [
+    {
+      "group": "SEX",
+      "value": "source category 1",
+      "n": 2966,
+      "default_rate": 0.23128792987188132,
+      "recall": 0.7376093294460642,
+      "false_positive_rate": 0.31535087719298244,
+      "flag_rate": 0.4130141604855024,
+      "brier": 0.139669999376517
+    },
+    {
+      "group": "SEX",
+      "value": "source category 2",
+      "n": 3034,
+      "default_rate": 0.1911667765326302,
+      "recall": 0.6879310344827586,
+      "false_positive_rate": 0.2925835370823146,
+      "flag_rate": 0.3681608437705999,
+      "brier": 0.1224772672414861
+    },
+    {
+      "group": "AGE_BAND",
+      "value": "21-29",
+      "n": 1733,
+      "default_rate": 0.20657818811309867,
+      "recall": 0.7849162011173184,
+      "false_positive_rate": 0.37672727272727274,
+      "flag_rate": 0.46105020196191576,
+      "brier": 0.1278452861683378
+    },
+    {
+      "group": "AGE_BAND",
+      "value": "30-39",
+      "n": 2349,
+      "default_rate": 0.19199659429544488,
+      "recall": 0.7139689578713969,
+      "false_positive_rate": 0.24183350895679662,
+      "flag_rate": 0.3324819071945509,
+      "brier": 0.1175041921712137
+    },
+    {
+      "group": "AGE_BAND",
+      "value": "40-49",
+      "n": 1391,
+      "default_rate": 0.22789360172537743,
+      "recall": 0.6593059936908517,
+      "false_positive_rate": 0.30446927374301674,
+      "flag_rate": 0.38533429187634793,
+      "brier": 0.1433735035639184
+    },
+    {
+      "group": "AGE_BAND",
+      "value": "50-59",
+      "n": 471,
+      "default_rate": 0.2632696390658174,
+      "recall": 0.6935483870967742,
+      "false_positive_rate": 0.34870317002881845,
+      "flag_rate": 0.4394904458598726,
+      "brier": 0.16167268907575305
+    },
+    {
+      "group": "AGE_BAND",
+      "value": "60+",
+      "n": 56,
+      "default_rate": 0.2857142857142857,
+      "recall": 0.4375,
+      "false_positive_rate": 0.3,
+      "flag_rate": 0.3392857142857143,
+      "brier": 0.2268506894538869
+    }
+  ],
+  "warning": "Diagnostic only. Group differences do not establish fairness/unfairness or legal compliance; small groups have high uncertainty."
+}

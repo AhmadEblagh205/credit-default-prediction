@@ -1,0 +1,26 @@
+{
+  "plain_logistic": {
+    "raw": {
+      "roc_auc": 0.7761461906106275,
+      "average_precision": 0.539907744255223,
+      "brier": 0.13113846718513272
+    },
+    "calibrated": {
+      "roc_auc": 0.7740226328178863,
+      "average_precision": 0.5208698359689178,
+      "brier": 0.13097620782690303
+    }
+  },
+  "smote_logistic": {
+    "raw": {
+      "roc_auc": 0.7729599362215187,
+      "average_precision": 0.5373023693306932,
+      "brier": 0.17892424655098288
+    },
+    "calibrated": {
+      "roc_auc": 0.7726641865407115,
+      "average_precision": 0.5238983856424625,
+      "brier": 0.13119197035961147
+    }
+  }
+}

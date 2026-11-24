@@ -1,0 +1,18 @@
+{
+  "test_row": 12,
+  "actual_default": 1,
+  "raw_logit": 1.909678306165422,
+  "raw_probability": 0.8709830029131026,
+  "calibrated_probability": 0.8571428571428571,
+  "risk_factors": [
+    "RECENT_DELAY raised the raw default log-odds (+2.366)",
+    "DELINQUENT_MONTHS raised the raw default log-odds (+0.556)",
+    "LOG_LIMIT_BAL raised the raw default log-odds (+0.518)"
+  ],
+  "protective_factors": [
+    "RECENT_UTIL lowered the raw default log-odds (-0.318)",
+    "MEAN_PAYMENT_TO_LIMIT lowered the raw default log-odds (-0.004)",
+    "BILL_CHANGE_TO_LIMIT lowered the raw default log-odds (-0.001)"
+  ],
+  "explanation_scope": "exact additive explanation of raw logistic log-odds; not additive on the isotonic-calibrated probability scale"
+}
