@@ -121,3 +121,14 @@ The governance module has two limited purposes:
 2. report held-out recall, false-positive rate, flag rate and Brier score across source-reported sex categories and age bands under one global threshold.
 
 It deliberately does **not** optimise group-specific thresholds or claim that any metric establishes fairness, discrimination or legal compliance.
+
+
+## Notes moved from the README
+
+- The earlier headline of 0.197 to 0.137 Brier score was measured on the same validation data used to fit the isotonic calibrator, so I retired it. On the held-out test file the raw logistic Brier score is 0.13114 and the isotonic calibrated score is 0.13101.
+- SMOTE under the clean split protocol: held-out raw Brier 0.179 and ROC-AUC 0.773, against 0.131 and 0.776 for the plain logistic model. After disjoint isotonic calibration both Brier scores return to about 0.131.
+- The empirical policy-split threshold optimum is 0.162, with the same measured policy cost at the theoretical 1/6. A bootstrap of that optimum spans about 0.147 to 0.320.
+- Demographic audit (SEX, MARRIAGE, AGE, EDUCATION added back): policy AUC 0.7464 for behaviour only and 0.7496 with demographics, a gain of 0.0032. The test confirmation gain is 0.0042 AUC. The smallest age band holds 56 clients, so subgroup diagnostics are uncertain.
+- The behaviour feature set replaces the original recursive AV_EXP chain, which mixed normalised quantities with raw currency amounts. Outlier deletion from the coursework pipeline was also dropped.
+- Reason codes (beta_j * z_j) are exact on the raw log-odds scale. They do not sum to the calibrated probability and are not causal explanations.
+- Logistic against histogram gradient boosting: ROC-AUC 0.776 against 0.802, a gap of 2.61 AUC points (paired bootstrap 95% interval 1.72 to 3.50), on the same fit, calibration and test splits.
